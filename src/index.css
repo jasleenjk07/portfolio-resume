@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-surface: #0c0f14;
+  --color-surface-elevated: #141922;
+  --color-border: #1e2736;
+  --color-muted: #8b9bb4;
+  --color-accent: #34d399;
+  --color-accent-dim: #059669;
+  --color-glow: rgba(52, 211, 153, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-glow);
+  color: #ecfdf5;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(52, 211, 153, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(52, 211, 153, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.glow-orb {
+  background: radial-gradient(
+    ellipse 60% 50% at 50% -10%,
+    var(--color-glow),
+    transparent 70%
+  );
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
